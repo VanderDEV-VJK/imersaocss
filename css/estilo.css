@@ -1,0 +1,38 @@
+/* Aula inicial :D */
+body {
+  background-image: url('https://p1.pxfuel.com/preview/634/494/424/blue-overseas-sea-depth.jpg');
+  background-size: auto 100vh;
+  font-family: Arial;
+  height: 100vh;
+}
+.menu {
+  background-color: white;
+}
+
+a {
+  color: teal;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.site-subtitle,
+.site-title {
+  text-align: center;
+  color: whitesmoke;
+}
+
+.site-subtitle {
+  font-style: italic;
+}
