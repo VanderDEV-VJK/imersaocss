@@ -1,21 +1,75 @@
 /* Aula inicial :D */
+/* reset do CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-image: url('https://p1.pxfuel.com/preview/634/494/424/blue-overseas-sea-depth.jpg');
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   background-size: auto 100vh;
-  font-family: Arial;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
   height: 100vh;
 }
+
+/* Se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px ) {
+  body {
+    font-size: 14px;
+  }  
+}
+
+/* Se a tela tiver pelo menos 600px vai carregar estes estilos */
+@media (min-width: 600px ) {
+  body {
+    font-size: 16px;
+  }  
+}
+
+/* Se a tela tiver pelo menos 800px vai carregar estes estilos */
+@media (min-width: 800px ) {
+  body {
+    font-size: 18px;
+  }  
+}
+
+/* Se a tela tiver pelo menos 1600px vai carregar estes estilos */
+@media (min-width: 1600px ) {
+  body {
+    font-size: 24px;
+  }  
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .menu {
-  background-color: white;
+  background-color: whitesmoke;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 30px;  
 }
 
 a {
-  color: teal;
+  color: linear-gradient(60deg, #29323c 0%, #485563 100%);
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  color: whitesmoke;
 }
 
 .menu ul {
@@ -35,4 +89,41 @@ a:hover {
 
 .site-subtitle {
   font-style: italic;
+}
+
+.portfolio-subtitle {
+  display: block;
+  padding: 2em;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 2em;
+}
+
+.img-portfolio {
+  height: 140px;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+
+.item-portfolio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 1em;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.item-portfolio figure {
+  margin-top: 2em;
 }
