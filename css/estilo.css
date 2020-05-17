@@ -55,19 +55,18 @@ header {
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1;
 }
 
 .menu a {
   display: block;
-  padding: 10px 30px;  
-}
-
-a {
+  padding: 10px 30px; 
   color: linear-gradient(60deg, #29323c 0%, #485563 100%);
   text-decoration: none;
+  transition: color 1s; 
 }
 
-a:hover {
+.menu a:hover {
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   color: whitesmoke;
 }
@@ -93,6 +92,7 @@ a:hover {
   font-size: 3em;
 }
 
+.contato-subtitle,
 .portfolio-subtitle {
   display: block;
   padding: 2em;
@@ -113,9 +113,10 @@ figcaption {
 .portfolio {
   padding: 1em;
   background-color: whitesmoke;
-  height: 100vh;
+  min-height: 100vh;
 }
 
+.contato,
 .portfolio h2 {
   font-family: 'Acme', sans-serif;
   font-size: 2em;
@@ -131,6 +132,7 @@ figcaption {
   .portfolio .grid {
     grid-template-columns: 240px 240px ;
     justify-content: center;  
+    width: 100%;
   }
 }
 
@@ -151,16 +153,70 @@ figcaption {
   height: 140px;
   width: 210px;
   object-fit: content;
-
+  transform: scale(1);
+  transition: transform 2000ms;
 }
 
+.img-portfolio:hover {
+  transform: scale(1.2) rotate(10deg);
+}
 
+.contato {
+  
+  background-color: whitesmoke;
+  min-height: 30vh;
+}
 
+.contato h2 {
+  font-family: 'Acme', sans-serif;
+  font-size: 1em;
+  margin-bottom: 1em;
+  color: whitesmoke;
+}
 
+.contato {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
 
+.contato a {
+  color: whitesmoke;
+  font-size: 1.5em;
+  transition: text-shadow 1s;
+}
 
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(255,255,255,.5);
+}
 
+.contato .grid {
+  display: grid;
+  gap: 1em;
+}
 
+@media (min-width: 560px) {
+  .contato .grid {
+    grid-template-columns: 240px 240px ;
+    justify-content: center;  
+    width: 100%;
+  }
+}
 
+@media (min-width: 880px) {
+  .contato .grid {
+    grid-template-columns: repeat(2, 260px);
+    align-items: center;
+    justify-content: center;  
+    
+    height: calc(90vh - 6em - 36px - 1.5em);
+  }
+}
 
-
+footer p {
+  text-align: center;
+  font-size: 1em;
+  color: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  margin: 20 auto;
+  background-color: whitesmoke;
+}
