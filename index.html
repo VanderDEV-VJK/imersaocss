@@ -11,9 +11,10 @@
 </head>
 
 <body>
-  <header>
+  <header ID="home">
     <nav class="menu">
-      <ul>
+      <ul class="container">
+        <li><a href="#home"> <i class="fas fa-home icon-nav" ></i> </a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#portfolio">Portfólio</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -24,31 +25,77 @@
       <h2 class="site-subtitle">web developer</h2>
     </div>
   </header>
+  
+  <section class="sobre container" id="sobre">
+    <h2 class="sobre-subtitle">Sobre</h2>
+    <figure class="avatar">
+      <img src="./img/user.jpg" alt="Vanderlei J Kempf">
+    </figure>
+    <p>    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, expedita? Sed eaque corrupti porro fugit vero incidunt nostrum provident! Dolores, quam. Quasi ab, asperiores nisi quo aliquam nam obcaecati vero?
+    </p>
 
-  <section class="portfolio" id="portfolio">
+    <p>Deserunt quisquam nesciunt velit, repellat dicta temporibus id. Iure beatae aliquid odit eum quis? Maxime hic aut eos doloremque! Earum in eum ratione aspernatur modi cumque beatae quisquam tempora placeat.</p>
+
+    <p>
+      Fugiat, officia? Voluptatibus, libero! Labore debitis assumenda, dicta perspiciatis praesentium vel expedita natus atque sequi harum beatae suscipit accusamus! Nobis id explicabo odio architecto earum ex illum porro, ad vero?
+    </p>
+
+    <p>Este site foi construído durante a <a href="https://alura.com.br/imersao-css">Imersão CSS da Alura</a> :D  </p>
+  </section>
+
+  <section class="portfolio container" id="portfolio">
     <h2 class="portfolio-subtitle">Portfólio</h2>
     
     <div class="grid">
-      <figure>
-        <img class="img-portfolio" src="./img/Web-Design.png" alt="Web design">
-        <figcaption>Web Design</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/mobile.png" alt=">Mobile">
-        <figcaption>Mobile</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.png" alt="Sites responsivos">
-        <figcaption>Responsivos</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/projetos.png" alt="Projetos pessoais">
-        <figcaption>Projetos pessoais</figcaption>
-      </figure>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/Web-Design.png" alt="Web design">
+          </figure>
+          <div class="card-back">
+            <figcaption>Web Design</figcaption>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/mobile.png" alt=">Mobile">
+          </figure>
+          <div class="card-back">
+            <figcaption>Mobile</figcaption>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.png" alt="Sites responsivos">
+          </figure>
+          <div class="card-back">
+            <figcaption>Responsivos</figcaption>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/projetos.png" alt="Projetos pessoais">
+          </figure>
+          <div class="card-back">
+            <figcaption>Projetos pessoais</figcaption>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <section class="contato" id="contato">
+  <section class="contato container" id="contato">
     <h2 class="contato-subtitle">Contato</h2>
     
     <div class="grid icons">
@@ -61,13 +108,13 @@
       <a target=_blank" href="https://www.instagram.com/vanderleikempf/">
         <i class="fab fa-instagram-square"></i>
       </a>
-      <a target=_blank" href="dev.vjk@gmail.com">
+      <a target=_blank" href = "mailto:dev.vjk@gmail.com">
         <i class="fas fa-envelope"></i>
       </a>
     </div>
   </section>
   <footer>
-    <p>todos os direitos reservados para Vanderlei  Kempf</p>
+    <p>© Copyright 2020 - Vanderlei Kempf</p>
   </footer>
 </body>
 

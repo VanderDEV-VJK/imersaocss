@@ -7,7 +7,6 @@
 }
 
 body {
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   background-size: auto 100vh;
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
@@ -48,10 +47,11 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
 
 .menu {
-  background-color: whitesmoke;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
   position: fixed;
   width: 100vw;
   top: 0;
@@ -61,13 +61,14 @@ header {
 .menu a {
   display: block;
   padding: 10px 30px; 
-  color: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  color: #070C4A;
   text-decoration: none;
   transition: color 1s; 
 }
 
-.menu a:hover {
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+.menu a:hover,
+.menu i:hover  {
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
   color: whitesmoke;
 }
 
@@ -78,6 +79,11 @@ header {
 
 .menu li {
   list-style: none;
+}
+
+.menu i {
+  font-size: 1.4em;
+  color: #070C4A;
 }
 
 .site-subtitle,
@@ -91,7 +97,7 @@ header {
   font-family: 'Acme', sans-serif;
   font-size: 3em;
 }
-
+.sobre-subtitle,
 .contato-subtitle,
 .portfolio-subtitle {
   display: block;
@@ -108,19 +114,60 @@ figcaption {
   text-align: center;
   font-family: 'Acme', sans-serif;
   font-size: 1.5em;
+  color: whitesmoke;
+}
+.sobre {
+  padding: 1em;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  min-height: 100vh;
 }
 
 .portfolio {
   padding: 1em;
-  background-color: whitesmoke;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
   min-height: 100vh;
+  color: whitesmoke;
 }
 
-.contato,
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sobre h2,
 .portfolio h2 {
   font-family: 'Acme', sans-serif;
   font-size: 2em;
   margin-bottom: 1em;
+}
+
+.sobre p {
+  color: #070C4A;
+  margin-bottom: 2em;
+  text-indent: 2em;
+  text-align: justify;
+}
+
+.sobre a {
+  color:grey;
+}
+
+.sobre a:hover {
+  color:crimson;
+  text-decoration: none;
+}
+
+.sobre .avatar {
+  float: left;
+  margin-right: 2em;
+}
+
+.sobre .avatar img {
+  border-radius: 50%;
+  width: 180px;
 }
 
 .portfolio .grid {
@@ -145,6 +192,40 @@ figcaption {
   }
 }
 
+.flip-card {
+  height: 180px;
+  perspective: 1000px;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 3s;
+}
+
+.card-front, 
+.card-back {
+  backface-visibility: hidden;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, .7);
+  height: 180px;
+  width: 100%;
+  transform: rotateY(180deg);
+}
+
 .portfolio figure {
   text-align: center;
 }
@@ -153,33 +234,32 @@ figcaption {
   height: 140px;
   width: 210px;
   object-fit: content;
-  transform: scale(1);
-  transition: transform 2000ms;
+ /* transform: scale(1);
+  transition: transform 2000ms;*/
 }
 
-.img-portfolio:hover {
+/*.img-portfolio:hover {
   transform: scale(1.2) rotate(10deg);
 }
-
+*/
 .contato {
-  
-  background-color: whitesmoke;
+  font-family: 'Acme', sans-serif;
+  font-size: 2em;
+  margin-bottom: 1em;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
   min-height: 30vh;
+  color: #070C4A;
 }
 
 .contato h2 {
   font-family: 'Acme', sans-serif;
   font-size: 1em;
-  margin-bottom: 1em;
-  color: whitesmoke;
+  color: #070C4A;
 }
 
-.contato {
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-}
 
 .contato a {
-  color: whitesmoke;
+  color: rgb(26, 28, 65);
   font-size: 1.5em;
   transition: text-shadow 1s;
 }
@@ -187,17 +267,18 @@ figcaption {
 .contato a:active,
 .contato a:hover {
   text-decoration: none;
-  text-shadow: 0px 0px 10px rgba(255,255,255,.5);
+  text-shadow: 0px 0px 20px rgba(47, 73, 158, 0.5);
 }
 
 .contato .grid {
   display: grid;
-  gap: 1em;
+  gap: 4em;
+  justify-content: center;
 }
 
 @media (min-width: 560px) {
   .contato .grid {
-    grid-template-columns: 240px 240px ;
+    grid-template-columns: 24px 24px ;
     justify-content: center;  
     width: 100%;
   }
@@ -205,18 +286,22 @@ figcaption {
 
 @media (min-width: 880px) {
   .contato .grid {
-    grid-template-columns: repeat(2, 260px);
+    grid-template-columns: repeat(2, 24px);
     align-items: center;
     justify-content: center;  
-    
     height: calc(90vh - 6em - 36px - 1.5em);
   }
 }
 
+footer {
+  min-height: 5vh;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
 footer p {
   text-align: center;
-  font-size: 1em;
-  color: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  margin: 20 auto;
-  background-color: whitesmoke;
+  align-items: center;
+  font-size: 0.8em;
+  /*margin: 20 auto;*/
+  color: whitesmoke;
 }
