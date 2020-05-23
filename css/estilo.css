@@ -62,14 +62,18 @@ header {
   display: block;
   padding: 10px 30px; 
   color: #070C4A;
+  
   text-decoration: none;
   transition: color 1s; 
+  
 }
 
 .menu a:hover,
-.menu i:hover  {
+.menu i:hover {
+  padding: auto 30px; 
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
   color: whitesmoke;
+  
 }
 
 .menu ul {
@@ -82,7 +86,7 @@ header {
 }
 
 .menu i {
-  font-size: 1.4em;
+  font-size: 1.15em;
   color: #070C4A;
 }
 
@@ -137,6 +141,11 @@ figcaption {
   }
 }
 
+.sobre {
+  font-family: 'Acme', sans-serif;
+  color: #070C4A;
+}
+
 .sobre h2,
 .portfolio h2 {
   font-family: 'Acme', sans-serif;
@@ -145,14 +154,14 @@ figcaption {
 }
 
 .sobre p {
-  color: #070C4A;
+  color: rgb(7, 12, 74, 0.7);
   margin-bottom: 2em;
   text-indent: 2em;
   text-align: justify;
 }
 
 .sobre a {
-  color:grey;
+  color:rgb(54, 54, 54);
 }
 
 .sobre a:hover {
@@ -161,18 +170,19 @@ figcaption {
 }
 
 .sobre .avatar {
-  float: left;
-  margin-right: 2em;
+  float: right;
+  margin-left: 2em;
 }
 
 .sobre .avatar img {
   border-radius: 50%;
   width: 180px;
+  box-shadow: 0px 0px 30px rgba(47, 73, 158, 0.8);
 }
 
 .portfolio .grid {
   display: grid;
-  gap: 1em;
+  gap: 3em;
 }
 
 @media (min-width: 560px) {
@@ -231,21 +241,15 @@ figcaption {
 }
 
 .img-portfolio {
-  height: 140px;
-  width: 210px;
+  height: 180px;
+  width: 100%;
   object-fit: content;
- /* transform: scale(1);
-  transition: transform 2000ms;*/
 }
 
-/*.img-portfolio:hover {
-  transform: scale(1.2) rotate(10deg);
-}
-*/
 .contato {
   font-family: 'Acme', sans-serif;
   font-size: 2em;
-  margin-bottom: 1em;
+  padding-bottom: 20px;
   background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
   min-height: 30vh;
   color: #070C4A;
@@ -257,17 +261,17 @@ figcaption {
   color: #070C4A;
 }
 
-
 .contato a {
   color: rgb(26, 28, 65);
   font-size: 1.5em;
-  transition: text-shadow 1s;
+  transition: transform .3s ease-in-out, text-shadow 1s;
 }
 
 .contato a:active,
 .contato a:hover {
   text-decoration: none;
-  text-shadow: 0px 0px 20px rgba(47, 73, 158, 0.5);
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(73, 44, 202, 0.9);
 }
 
 .contato .grid {
@@ -294,7 +298,7 @@ figcaption {
 }
 
 footer {
-  min-height: 5vh;
+  min-height: 10px;
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
 
@@ -302,6 +306,15 @@ footer p {
   text-align: center;
   align-items: center;
   font-size: 0.8em;
-  /*margin: 20 auto;*/
+  padding: 10px;
   color: whitesmoke;
+}
+
+footer p a {
+  color:whitesmoke
+}
+
+footer p a:hover {
+  color:rgb(220, 183, 20);
+  text-decoration: none;
 }
